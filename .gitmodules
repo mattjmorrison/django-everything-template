@@ -1,0 +1,18 @@
+[submodule "devops/cookbooks/apache2"]
+	path = devops/cookbooks/apache2
+	url = https://github.com/opscode-cookbooks/apache2.git
+[submodule "devops/cookbooks/apt"]
+	path = devops/cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "devops/cookbooks/git"]
+	path = devops/cookbooks/git
+	url = https://github.com/opscode-cookbooks/git.git
+[submodule "devops/cookbooks/openssl"]
+	path = devops/cookbooks/openssl
+	url = https://github.com/opscode-cookbooks/openssl.git
+[submodule "devops/cookbooks/postgresql"]
+	path = devops/cookbooks/postgresql
+	url = https://github.com/opscode-cookbooks/postgresql.git
+[submodule "devops/cookbooks/python"]
+	path = devops/cookbooks/python
+	url = https://github.com/opscode-cookbooks/python.git

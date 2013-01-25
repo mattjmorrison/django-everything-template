@@ -1,0 +1,5 @@
+django
+south
+django_compressor
+djangorestframework
+sphinx

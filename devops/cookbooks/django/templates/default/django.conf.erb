@@ -1,0 +1,25 @@
+WSGIPythonHome <%= @params[:root_dir] %>/virtualenv
+
+<VirtualHost *:80>
+  ServerName <%= @params[:server_name] %>
+  ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
+  DocumentRoot <%= @params[:root_dir] %>/static/
+
+  Alias /assets/ <%= @params[:root_dir] %>/static/
+  <Directory <%= @params[:root_dir] %>/static/>
+    Options FollowSymLinks MultiViews ExecCGI
+    AllowOverride None
+    Order allow,deny
+    allow from all
+  </Directory>
+
+  WSGIApplicationGroup %{GLOBAL}
+  WSGIScriptAlias / <%= @params[:root_dir] %>/project/wsgi.py
+  WSGIDaemonProcess <%= @params[:server_name] %> processes=<%= @params[:http_processes] %> threads=<%= @params[:http_threads] %> display-name=<%= @params[:server_name] %> python-path=<%= @params[:root_dir] %>/virtualenv/lib/python2.7/site-packages:<%= @params[:root_dir] %>
+  WSGIProcessGroup <%= @params[:server_name] %>
+
+  LogLevel info
+  ErrorLog <%= node[:apache][:log_dir] %>/<%= @params[:server_name] %>-error.log
+  CustomLog <%= node[:apache][:log_dir] %>/<%= @params[:server_name] %>-access.log combined
+
+</VirtualHost>

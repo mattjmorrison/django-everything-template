@@ -1,0 +1,7 @@
+-r base.txt
+bpython
+nose
+django-nose
+lettuce
+django-debug-toolbar
+        
