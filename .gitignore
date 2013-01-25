@@ -1,0 +1,7 @@
+*~
+.vagrant
+*.py[oc]
+.database
+static/*
+docs/build/*
+node_modules/*

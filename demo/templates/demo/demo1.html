@@ -1,0 +1,17 @@
+{% load staticfiles %}
+{% load compress %}
+<!doctype html>
+<html>
+    <head>
+        <title>Demo</title>
+        {% compress css %}
+        <link type="text/less" rel="stylesheet" href="{% static 'demo/less/demo1.less' %}" />
+        {% endcompress %}
+    </head>
+    <body>
+        <h1>Demo</h1>
+        {% compress js %}
+        <script type="text/coffeescript" src="{% static 'demo/coffee/demo1.coffee' %}"></script>
+        {% endcompress %}
+    </body>
+</html>
