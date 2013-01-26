@@ -24,7 +24,7 @@ end
 
 task :setup_python_environment do
     run "virtualenv #{current_release}/virtualenv"
-    run "#{pip} install -r #{current_release}/devops/requirements/base.txt"
+    run "#{pip} install -r #{current_release}/devops/requirements/#{requirements}.txt"
 end
 
 task :setup_django_environment do
