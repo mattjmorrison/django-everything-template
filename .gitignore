@@ -5,4 +5,4 @@ Gemfile.lock
 .database
 static/*
 docs/build/*
-node_modules/*
+node_modules
