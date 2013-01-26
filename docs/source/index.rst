@@ -11,7 +11,7 @@ Contents:
    database.rst
    static.rst
    documentation.rst
-   dependencies.rst
+   devops.rst
 
 
 TODO

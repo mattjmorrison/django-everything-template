@@ -1,8 +1,8 @@
-************
-Dependencies
-************
+***
+PIP
+***
 
-PIP_ is a great tool for managing dependencies.
+PIP_ is a great tool for managing Python dependencies.
 
 Installing Dependencies
 =======================
