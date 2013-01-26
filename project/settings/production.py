@@ -8,3 +8,5 @@ DATABASES = {
         'NAME': os.path.join(PROJECT_ROOT, '.production_database'),
     }
 }
+
+COMPRESS_OFFLINE = True
