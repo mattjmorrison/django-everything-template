@@ -91,7 +91,7 @@ LOGGING = {
     }
 }
 
-NODE_ROOT = os.path.join(PROJECT_ROOT, 'node_modules')
+NODE_ROOT = os.path.join(PROJECT_ROOT, 'devops', 'node_modules')
 COFFEE_PATH = os.path.join(NODE_ROOT, 'coffee-script', 'bin', 'coffee')
 LESS_PATH = os.path.join(NODE_ROOT, 'less', 'bin', 'lessc')
 
