@@ -5,7 +5,7 @@ WSGIPythonHome <%= @params[:root_dir] %>/virtualenv
   ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
   DocumentRoot <%= @params[:root_dir] %>/static/
 
-  Alias /assets/ <%= @params[:root_dir] %>/static/
+  Alias /static/ <%= @params[:root_dir] %>/static/
   <Directory <%= @params[:root_dir] %>/static/>
     Options FollowSymLinks MultiViews ExecCGI
     AllowOverride None

@@ -8,14 +8,19 @@ def pip
     "#{current_release}/virtualenv/bin/pip"
 end
 
-def django(args, flags)
+def django(args, flags="")
     run "#{python} #{current_release}/manage.py #{django_env} #{args} #{flags}"
 end
 
 after 'deploy:update_code', :setup_python_environment
+before :setup_django_environment, :setup_node_environment
 after :setup_python_environment, :setup_django_environment
 before 'deploy:create_symlink', :setup_database_environment
 after 'deploy:update', 'deploy:cleanup'
+
+task :setup_node_environment do
+    run "cd #{current_release}/devops && npm install"
+end
 
 task :setup_python_environment do
     run "virtualenv #{current_release}/virtualenv"
