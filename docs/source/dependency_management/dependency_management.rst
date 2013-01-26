@@ -7,6 +7,6 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   pip.rst
-   npm.rst
-   bundler.rst
+   python.rst
+   node.rst
+   ruby.rst
