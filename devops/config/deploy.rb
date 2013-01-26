@@ -24,14 +24,13 @@ end
 
 task :setup_python_environment do
     run "virtualenv #{current_release}/virtualenv"
-    run "#{pip} install -r #{current_release}/devops/requirements/#{requirements}.txt"
+    run "#{pip} install -r #{current_release}/devops/requirements/#{django_env}.txt"
 end
 
 task :setup_django_environment do
     django("compress")
     django("collectstatic", "-i *.coffee -i *.less --noinput")
-    settings_file = django_env.gsub(".", "/")
-    run "ln -s #{current_release}/project/settings/#{settings_file}.py #{current_release}/project/settings/deployed.py"
+    run "ln -s #{current_release}/project/settings/#{django_env}.py #{current_release}/project/settings/deployed.py"
 end
 
 task :setup_database_environment do

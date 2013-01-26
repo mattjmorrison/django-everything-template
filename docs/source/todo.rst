@@ -14,6 +14,7 @@ Vagrant
 rvm
 bundler
 npm
+Rake
 
 Add convention around:
 	capistrano environment

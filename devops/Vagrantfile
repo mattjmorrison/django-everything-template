@@ -15,11 +15,16 @@ Vagrant::Config.run do |config|
       chef.add_recipe 'postgresql::server'
       chef.add_recipe 'nodejs'
       chef.add_recipe 'django'
+      chef.add_recipe 'django::postgres'
       chef.json = {
         :postgresql => {
           :password => {
             "postgres" => "testing",
-          }
+          },
+          :databases => [{
+            "owner" => "postgres",
+            "name" => "production_djeverything",
+          }],
         },
       }
 
