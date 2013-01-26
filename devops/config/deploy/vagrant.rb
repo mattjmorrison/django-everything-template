@@ -12,7 +12,7 @@ set :deploy_to, "/var/www/django-everything/"
 
 # App Info
 set :django_env, 'production'
-set :requirements, 'requirements/base.txt'
+set :requirements, 'requirements/production.txt'
 
 # Need name of deployed wsgi file
 # Need name of deployed settings file

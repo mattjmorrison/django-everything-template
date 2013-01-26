@@ -29,6 +29,13 @@ rvm
 bundler
 npm
 
+Add convention around:
+	capistrano environment
+	django settings name
+	django requirements name
+	git branch name
+	etc...
+
 Add Chef recipe for node
 Add Chef recipe for creating initial postgres database
 
