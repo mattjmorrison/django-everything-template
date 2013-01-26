@@ -4,8 +4,11 @@ TEMPLATE_DEBUG = DEBUG = False
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_ROOT, '.production_database'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'production_djeverything',
+        'HOST': 'localhost',
+        'USER': 'postgres',
+        'PASSWORD': 'testing',
     }
 }
 
