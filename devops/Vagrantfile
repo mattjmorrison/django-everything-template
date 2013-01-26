@@ -7,20 +7,24 @@ Vagrant::Config.run do |config|
     web.vm.forward_port 22, 2222
     web.vm.provision :chef_solo do |chef|
       chef.add_recipe 'apt'
+      chef.add_recipe 'build-essential'
       chef.add_recipe 'git'
       chef.add_recipe 'python'
       chef.add_recipe 'apache2'
       chef.add_recipe 'apache2::mod_wsgi'
       chef.add_recipe 'postgresql::server'
+      chef.add_recipe 'nodejs'
       chef.add_recipe 'django'
       chef.json = {
         :postgresql => {
           :password => {
             "postgres" => "testing",
           }
-        }
-      }      
+        },
+      }
+
     end
+
   end
 
 end

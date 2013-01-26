@@ -8,10 +8,9 @@ def pip
     "#{current_release}/virtualenv/bin/pip"
 end
 
-def django(args)
-    run "#{python} #{current_release}/manage.py #{django_env} #{args} --noinput"
+def django(args, flags)
+    run "#{python} #{current_release}/manage.py #{django_env} #{args} #{flags}"
 end
-
 
 after 'deploy:update_code', :setup_python_environment
 after :setup_python_environment, :setup_django_environment
@@ -24,13 +23,14 @@ task :setup_python_environment do
 end
 
 task :setup_django_environment do
-    django("collectstatic")
+    django("compress", "-i *.coffee -i *.less")
+    django("collectstatic", "--noinput")
     settings_file = django_env.gsub(".", "/")
     run "ln -s #{current_release}/project/settings/#{settings_file}.py #{current_release}/project/settings/deployed.py"
 end
 
 task :setup_database_environment do
-    django("syncdb --migrate")
+    django("syncdb", "--noinput --migrate")
 end
 
 namespace :deploy do

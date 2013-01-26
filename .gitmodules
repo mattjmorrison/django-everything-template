@@ -16,3 +16,9 @@
 [submodule "devops/cookbooks/python"]
 	path = devops/cookbooks/python
 	url = https://github.com/opscode-cookbooks/python.git
+[submodule "devops/cookbooks/nodejs"]
+	path = devops/cookbooks/nodejs
+	url = https://github.com/mdxp/nodejs-cookbook.git
+[submodule "devops/cookbooks/build-essential"]
+	path = devops/cookbooks/build-essential
+	url = https://github.com/opscode-cookbooks/build-essential.git

@@ -16,13 +16,15 @@ Contents:
 
 TODO
 
+Add travis-ci
+
 Add Docs for
 
 Chef
 Capistrano
 Vagrant
-RVM
-Gem
+rvm
+bundler
 npm
 
 Add Chef recipe for node
