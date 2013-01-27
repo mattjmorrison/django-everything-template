@@ -1,2 +1,6 @@
 
-Check out the docs directory for some info.
+
+Check out Read the Docs_.
+
+
+.. _Read the Docs: https://django-everything-template.readthedocs.org/en/latest/
