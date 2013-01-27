@@ -11,4 +11,5 @@ Contents:
    database.rst
    static.rst
    documentation.rst
-   devops.rst
+   devops/devops.rst
+   rake.rst
