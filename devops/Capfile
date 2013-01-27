@@ -1,5 +1,8 @@
 set :stages, %w( vagrant staging production )
 set :default_stage, "vagrant"
 
+require 'capistrano/django'
 require 'capistrano/ext/multistage'
-load 'config/deploy'
+
+load 'deploy' if respond_to?(:namespace)
+
