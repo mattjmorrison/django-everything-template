@@ -1,5 +1,10 @@
+
 language: python
+
 python: "2.7"
+
 install: "pip install -r devops/requirements/dev.txt"
-script: "python manage.py dev test"
-script: "python manage.py dev lettuce"
+
+script:
+  - python manage.py dev test
+  - python manage.py dev harvest
