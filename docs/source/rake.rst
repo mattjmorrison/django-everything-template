@@ -11,6 +11,7 @@ Rake
 				2. rake deps:python[env]
 				3. rake deps:ruby
 				4. rake docs:build
+				5. rake travis:validate
 
 		To see these tasks and a description of each, use the following command::
 

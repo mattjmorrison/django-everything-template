@@ -28,3 +28,13 @@ namespace :docs do
 	end
 
 end
+
+desc "travis-ci tasks"
+namespace :travis do
+
+	desc "Validate travis-ci config"
+	task :validate do
+		system "travis-lint"
+	end
+
+end
