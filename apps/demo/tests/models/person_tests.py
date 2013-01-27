@@ -1,9 +1,9 @@
 import unittest
-from demo import models
+from apps.demo import models
 
 
 class PersonModelTests(unittest.TestCase):
-    
+
     def test_user_unicode_resturns_name_and_language(self):
         person = models.Person(name='Steve', language='Python')
         self.assertEqual(u"Steve : Python", unicode(person))

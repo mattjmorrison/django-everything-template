@@ -14,6 +14,6 @@ class Person(models.Model):
 
     def __unicode__(self):
         return "{} : {}".format(self.name, self.language)
-        
+
     class Meta(object):
         verbose_name_plural = 'people'

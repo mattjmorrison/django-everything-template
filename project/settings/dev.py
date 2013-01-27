@@ -32,4 +32,3 @@ DEBUG_TOOLBAR_CONFIG = {
 }
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
-

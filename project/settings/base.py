@@ -52,7 +52,7 @@ TEMPLATE_DIRS = (
 )
 
 LETTUCE_APPS = (
-    'demo',
+    'apps.demo',
 )
 INSTALLED_APPS = (
     'south',
@@ -64,7 +64,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'compressor',
-    'rest_framework',    
+    'rest_framework',
 ) + LETTUCE_APPS
 
 LOGGING = {

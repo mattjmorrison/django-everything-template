@@ -8,3 +8,4 @@ install: "pip install -r devops/requirements/dev.txt"
 script:
   - python manage.py dev test
   - python manage.py dev harvest
+  - flake8 project apps --max-line-length=120 --max-complexity=3

@@ -4,4 +4,4 @@ nose
 django-nose
 lettuce
 django-debug-toolbar
-        
+flake8

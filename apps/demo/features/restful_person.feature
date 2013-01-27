@@ -4,7 +4,7 @@ Feature: Restful Webservice for Person
                 Given the following data
                         | name | language   |
                         | Kyle | JavaScript |
-                When I 'POST' to the '/demo/person/' resource url
+                When I 'POST' to the '/demo/person/' url
                 Then I should get a '201' status code
                 And I should get a valid json document in the response body
                 And I should get a 'name' of 'Kyle' in the json document
@@ -15,8 +15,8 @@ Feature: Restful Webservice for Person
                 Given the following data
                         | name | language |
                         | Carl | Ruby     |
-                When I 'POST' to the '/demo/person/' resource url
-                And I 'GET' to the '/demo/person/' resource url with the 'id' from the previous response
+                When I 'POST' to the '/demo/person/' url
+                And I 'GET' to the '/demo/person/' url with the 'id' from the previous response
                 Then I should get a '200' status code
                 And I should get a valid json document in the response body
                 And I should get a 'name' of 'Carl' in the json document
@@ -27,8 +27,8 @@ Feature: Restful Webservice for Person
                 Given the following data
                         | name | language |
                         | Carl | Ruby     |
-                When I 'POST' to the '/demo/person/' resource url
-                And I 'PUT' to the '/demo/person/' resource url with the 'id' from the previous response with the following data
+                When I 'POST' to the '/demo/person/' url
+                And I 'PUT' to the '/demo/person/' url with the 'id' from the previous response with the following data
                         | name | language |
                         | Carl | Python   |                
                 Then I should get a '200' status code
@@ -41,8 +41,8 @@ Feature: Restful Webservice for Person
                 Given the following data
                         | name | language |
                         | Carl | Ruby     |
-                When I 'POST' to the '/demo/person/' resource url
-                And I 'DELETE' to the '/demo/person/' resource url with the 'id' from the previous response
+                When I 'POST' to the '/demo/person/' url
+                And I 'DELETE' to the '/demo/person/' url with the 'id' from the previous response
                 Then I should get a '204' status code
-                And I 'GET' to the '/demo/person/' resource url with the 'id' from the previous response
+                And I 'GET' to the '/demo/person/' url with the 'id' from the previous response
                 Then I should get a '404' status code
