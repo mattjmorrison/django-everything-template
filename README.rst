@@ -1,6 +1,6 @@
 
 
-Check out Read the Docs_.
+Check out `Read the Docs`_.
 
 
-.. _Read the Docs: https://django-everything-template.readthedocs.org/en/latest/
+.. _`Read the Docs`: https://django-everything-template.readthedocs.org/en/latest/
