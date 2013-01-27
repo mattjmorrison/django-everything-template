@@ -1,4 +1,4 @@
-from project.settings.base import *
+from project.settings.base import *  # NOQA
 
 TEMPLATE_DEBUG = DEBUG = True
 COMPRESS_ENABLED = False
