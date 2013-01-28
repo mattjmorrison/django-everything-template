@@ -6,3 +6,4 @@ Gemfile.lock
 static/*
 docs/build/*
 node_modules
+.coverage
