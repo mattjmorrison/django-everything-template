@@ -1,5 +1,8 @@
 
 
+.. image:: https://travis-ci.org/mattjmorrison/django-everything-template.png?branch=master
+        :target: https://travis-ci.org/mattjmorrison/django-everything-template
+
 Check out `Read the Docs`_.
 
 

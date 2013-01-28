@@ -1,5 +1,0 @@
-****
-TODO
-****
-
-Add travis-ci
