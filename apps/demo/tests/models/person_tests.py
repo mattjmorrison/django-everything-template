@@ -1,12 +1,12 @@
 import unittest
-from apps.demo import models
+from apps.demo.models import person
 
 
 class PersonModelTests(unittest.TestCase):
 
     def test_user_unicode_resturns_name_and_language(self):
-        person = models.Person(name='Steve', language='Python')
-        self.assertEqual(u"Steve : Python", unicode(person))
+        sut = person.Person(name='Steve', language='Python')
+        self.assertEqual(u"Steve : Python", unicode(sut))
 
     def test_plural_name_is_correct(self):
-        self.assertEqual('people', models.Person._meta.verbose_name_plural)
+        self.assertEqual('people', person.Person._meta.verbose_name_plural)

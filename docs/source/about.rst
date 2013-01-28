@@ -10,6 +10,7 @@ typically use in a django project. In addition to that this project
 contains everything you need to set up all of the following things:
 
 	#. A new Django Project (with multiple environment settings)
+	#. A slightly modified directory structure
 	#. A robust development environment (bpython, django-debug-toolbar)
 	#. A robust unit testing framework (nose, django-nose)
 	#. A robust acceptance testing framework (lettuce)

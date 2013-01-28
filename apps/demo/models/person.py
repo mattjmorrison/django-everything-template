@@ -17,3 +17,4 @@ class Person(models.Model):
 
     class Meta(object):
         verbose_name_plural = 'people'
+        app_label = 'demo'
