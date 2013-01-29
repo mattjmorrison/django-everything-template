@@ -3,3 +3,4 @@ south
 django_compressor
 djangorestframework
 sphinx
+django-celery

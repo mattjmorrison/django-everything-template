@@ -65,6 +65,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'compressor',
     'rest_framework',
+    'djcelery',
+    'kombu.transport.django',
 ) + LETTUCE_APPS
 
 LOGGING = {
@@ -107,3 +109,11 @@ COMPRESS_CSS_FILTERS = (
 
 COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = True
+
+
+BROKER_URL = 'django://'
+
+import djcelery
+djcelery.setup_loader()
+
+
