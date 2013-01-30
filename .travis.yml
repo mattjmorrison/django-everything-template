@@ -1,10 +1,9 @@
-
+branches:
+  only:
+    - master
 language: python
-
 python: "2.7"
-
 install: "pip install -r devops/requirements/dev.txt"
-
 script:
   - python manage.py dev test --with-coverage --cover-package=apps --cover-min-percentage=95
   - python manage.py dev harvest
