@@ -1,5 +1,7 @@
 
 Vagrant::Config.run do |config|
+  config.vm.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+  config.vm.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   config.vm.box = "ubuntu-12.04"
 
   config.vm.define :web do |web|
