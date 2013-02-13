@@ -1,4 +1,5 @@
 *~
+*#
 .vagrant
 Gemfile.lock
 *.py[oc]
@@ -7,3 +8,4 @@ static/*
 docs/build/*
 node_modules
 .coverage
+celerybeat-schedule
