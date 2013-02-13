@@ -3,6 +3,7 @@
 set :application, 'django-everything-template'
 set :scm, :git
 set :repository, 'https://github.com/mattjmorrison/django-everything-template.git'
+set :branch, 'celery'
 
 # Server Info
 role :web, "root@localhost"
