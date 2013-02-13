@@ -25,3 +25,6 @@
 [submodule "devops/cookbooks/rabbitmq"]
 	path = devops/cookbooks/rabbitmq
 	url = https://github.com/opscode-cookbooks/rabbitmq.git
+[submodule "devops/cookbooks/django"]
+	path = devops/cookbooks/django
+	url = git@github.com:imtapps/django-cookbook.git
