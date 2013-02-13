@@ -1,0 +1,4 @@
+CELERYBEAT_CHDIR=<%= @chdir %>
+ENV_PYTHON=$CELERYBEAT_CHDIR/virtualenv/bin/python
+CELERYBEAT="$ENV_PYTHON $CELERYBEAT_CHDIR/manage.py deployed celery beat"
+CELERYBEAT_LOG_LEVEL=DEBUG

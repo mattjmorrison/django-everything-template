@@ -27,13 +27,17 @@ DEFAULT_LOG_LEVEL="INFO"
 DEFAULT_CELERYBEAT="celerybeat"
 
 # /etc/init.d/celerybeat: start and stop the celery periodic task scheduler daemon.
+CELERY_DEFAULTS=<%= @celery_defaults %>
+CELERYBEAT_DEFAULTS=<%= @celerybeat_defaults %>
 
-if test -f /etc/default/celeryd; then
+test -f "$CELERY_DEFAULTS" && . "$CELERY_DEFAULTS"
+if [ -f "/etc/default/celeryd" ]; then
     . /etc/default/celeryd
 fi
 
-if test -f /etc/default/celerybeat; then
-    . /etc/default/celerybeat
+test -f "$CELERYBEAT_DEFAULTS" && . "$CELERYBEAT_DEFAULTS"
+if [ -f "/etc/default/celerybeat" ]; then
+   . /etc/default/celerybeat
 fi
 
 CELERYBEAT=${CELERYBEAT:-$DEFAULT_CELERYBEAT}
